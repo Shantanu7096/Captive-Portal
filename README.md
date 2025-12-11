@@ -9,26 +9,26 @@ A full-stack captive portal solution designed for university or enterprise netwo
 
 * **Google OAuth Integration:** Secure sign-in using institutional or personal Google accounts.
 * **Ruckus SmartZone Integration:** Auto-detects `client_mac` and Controller IP (`uip`/`sip`) from the redirect URL to authorize devices.
-* **Access Control:**
+* **smart Access Control:**
     * **Daily Limits:** Limits users to 3 logins per day.
     * **Cooldowns:** Enforces a 10-minute cooldown between sessions.
     * **Session Timer:** Visual countdown for internet session expiry (default 10 mins).
 * **Admin Dashboard:** Real-time view of active/inactive users and access logs.
 * **Firebase Backend:** Stores user data, access logs, and admin privileges in Firestore.
-* **Mock Controller API:** The server currently mocks the Ruckus API response for development purposes.
+* **Mock Controller API:** Includes a development mode to mock Ruckus API responses.
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Client (Frontend)
-* **Framework:** ![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=black) + ![Vite](https://img.shields.io/badge/-Vite-646CFF?style=flat&logo=vite&logoColor=white)
+* **Framework:** React + Vite
 * **Auth:** `@react-oauth/google`
-* **Database:** ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat&logo=firebase&logoColor=black) (Firestore)
+* **Database:** Firebase Firestore
 * **Styling:** CSS Modules (Responsive Design)
 
 ### Server (Backend)
-* **Runtime:** ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat&logo=node.js&logoColor=white) + Express
+* **Runtime:** Node.js + Expresss
 * **Auth Verification:** `google-auth-library`
 * **Network Requests:** `axios` (for Ruckus API communication)
 
